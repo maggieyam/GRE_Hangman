@@ -6,12 +6,12 @@ import random
 import graphics
 import hangman
 
-COMMON = "common.csv"
-BASIC = "basic.csv"
-ADVANCED = "advanced.csv"
+COMMON = "/Users/maggieyan/Desktop/cs106AP/GREHangman/common.csv"
+BASIC = "/Users/maggieyan/Desktop/cs106AP/GREHangman/basic.csv"
+ADVANCED = "/Users/maggieyan/Desktop/cs106AP/GREHangman/advanced.csv"
 
 TITLE = "Hangman"
-PATH = "/Users/maggieyan/Desktop/images/"
+PATH = "/Users/maggieyan/Desktop/cs106AP/GREHangman/images/"
 INITIAL_LIVES = 5
 INITIAL_GUESSES = 8  # Initial number of guesses player starts with
 
@@ -71,9 +71,6 @@ BUTTON3_COLOR = ['ghost white', 'ghost white', 'brown1']
 
 
 def make_choice_gui():
-    """
-    This function
-    """
     top = make_window(WINDOW1_WIDTH, WINDOW_HEIGHT1, WINDOW1_X, WINDOW1_Y, TITLE)
     make_button(top, "game_name", (150, 30), (NAME_WIDTH, NAME_HEIGHT))
 
@@ -110,7 +107,9 @@ def make_gui(word, info):
 
 def make_labels(top, info):
     """
-
+     @param  top    the main  window of the game
+     @param  info   A dictionary contains original
+                        word list and player information.
     """
     size = HEALTH_WIDTH, HEALTH_HEIGHT
     image = open_image(INITIAL_LIVES, HEALTH_WIDTH, HEALTH_HEIGHT)
@@ -128,7 +127,10 @@ def make_labels(top, info):
 
 def make_canvas(top, info):
     """
-
+     @param  top    the main  window of the game
+     @param  info   A dictionary contains original
+                        word list and player information.
+     returns the canvas                   
     """
     width = CANVAS_WIDTH
     height = CANVAS_HEIGHT
@@ -142,7 +144,10 @@ def make_canvas(top, info):
 
 def make_entry(top, canvas, info):
     """
-
+     @param  top     the main  window of the game
+     @param  canvas  the canvas
+     @param  info    A dictionary contains original
+                        word list and player information.
     """
     entry = tkinter.Entry(top, width=8, name='entry')
     entry.place(x=360, y=140, width=105, height=25)
@@ -154,7 +159,7 @@ def make_entry(top, canvas, info):
 
 def make_function_buttons(top, canvas, word, info):
     """
-    @param  top         the main  window of the game
+    @param  top         the main window of the game
     @param  canvas      Canvas
     @param  word
     @param  info        A dictionary contains original
@@ -214,7 +219,7 @@ def make_letter_buttons(top, canvas, info):
 
 def make_definition(info):
     """
-    @param  info        A dictionary contains original
+    @param  info    A dictionary contains original
                         word list and player information.
     """
     top = make_window(WINDOW3_WIDTH, WINDOW_HEIGHT3, WINDOW3_X, WINDOW3_Y, 'Definition')
@@ -242,9 +247,7 @@ def make_window(width, height, x, y, title):
 
 
 def make_button(top, file, coord, size):
-    """
 
-    """
     image = open_image(file, size[0], size[1])
     btn = Button(top, image=image, highlightbackground=BG)
     btn.place(x=coord[0], y=coord[1], width=size[0], height=size[1])

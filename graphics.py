@@ -126,7 +126,6 @@ def lose(canvas, info):
     canvas.itemconfig("body", fill="red")
     canvas.itemconfig("head", outline="red")
     canvas.itemconfig("answer", text=info.get('answer'), fill='red')
-    man_move(canvas, 'body', 0, 6)
     if info.get('lives') == 1:
         end_scene(canvas, info)
 
@@ -139,9 +138,6 @@ def end_scene(canvas, info):
 
 
 def pull_strings(canvas, dy, dir1, dir2):
-    """
-
-    """
     while dy > 0:
         for i in range(dy):
             canvas.coords("string", STRING_X, POLE_Y, STRING_X, STRING_Y + i * dir1)
@@ -150,13 +146,11 @@ def pull_strings(canvas, dy, dir1, dir2):
             animation(canvas, 0.001)
             dy -= i
 
-
 def man_move(canvas, object, dx, dy):
     while canvas.coords(object)[0] <= CANVAS_WIDTH and canvas.coords(object)[1] <= CANVAS_HEIGHT + 100:
         canvas.move(object, dx, dy)
         animation(canvas, 0.001)
-
-
+        
 def animation(canvas, delay):
     """
     This function creates animation effects.
