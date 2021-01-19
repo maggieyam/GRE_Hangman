@@ -7,7 +7,7 @@
 ![](hangman_level.png)
 
 ## 2. Look up tips
-* Click `Tips` to see definition of the word.
+* Click **`Tips`** to see definition of the word.
 
 ## 3. Take a guess
 * Click letter buttons or type to take a guess.
@@ -18,10 +18,10 @@
 * The game ends when the health bar drops to zero.
 
 ## 5. Skip a round
-* Click `Next` to skip this word.
+* Click **`Next`** to skip this word.
 * Skipping will cost the user one life.
 
 ## 6. Quit the game
-* Click `Quit` to exit the game.
+* Click **`Quit`** to exit the game.
 
 ![](GRE_Hangman.gif)
