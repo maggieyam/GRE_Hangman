@@ -25,3 +25,5 @@
 * Click **`Quit`** to exit the game.
 
 ![](GRE_Hangman.gif)
+
+#### * All credit goes to Magoosh for vocabulary and definitions.
